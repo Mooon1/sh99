@@ -1,0 +1,17 @@
+/backup/
+/modules/
+/plugins/
+/server/
+/update/
+/Worlds/
+/.idea/
+/bungee.bat
+/BungeeCord.jar
+/config.yml
+/locations.yml
+/modules.yml
+/proxy.log.0
+/proxy.log.0.1
+/proxy.log.0.1.lck
+/proxy.log.0.lck
+/spigot.jar

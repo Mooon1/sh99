@@ -4,10 +4,16 @@ A server management cli for bungeecord.
 ##Requirements
 • PHP 7+
 
-## Usage
-There are a few commands you can use to manage your bungeecord server.
+## Installation
 
-Before writine a command you always need to use call php on cli.
+Put the `sh99.php` file in your main bungeecord directory. 
+Also put the `/cli/` folderin there.
+
+Make sure you have installed PHP and run the php file with params and flags.
+
+## Usage
+There are a few params you can use to manage your bungeecord server.
+Before using a command you always need to call php on cli.
 
 ---
 

@@ -113,5 +113,9 @@ foreach ($dirs as $dir){
         copy($plugin['path'], $dir . '/' . $plugin['name']);
         printf($lang['update']['copied_jar_file'], $plugin['name'], $dir);
     }
+
+    foreach ($newPlugins as $p){
+        unlink($plugin['path']);
+    }
 }
 

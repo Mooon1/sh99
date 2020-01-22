@@ -20,6 +20,9 @@ $cfg = [
             '-gravity' => [
                 '/server/citybuild/moon',
             ],
+            '-gungame' => [
+                '/server/minigame/gungame',
+            ],
         ],
     ],
 ];

@@ -8,4 +8,10 @@ $cfg = [
             'backup',
         ],
     ],
+    'update'=> [
+        'path' => '',
+        'excluded' => [
+
+        ],
+    ],
 ];

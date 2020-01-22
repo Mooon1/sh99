@@ -4,7 +4,6 @@ $start = time();
 
 define("BASE_PATH", __DIR__);
 
-
 require_once BASE_PATH . "/cli/lang/en.php";
 require_once BASE_PATH . "/cli/cfg/settings.php";
 require_once BASE_PATH . "/cli/func/backup.func.php";
@@ -13,6 +12,7 @@ foreach ($argv as $arg){
     switch ($arg){
         case "--bk":
         case "--backup":
+            echo $lang['backup']['loading'];
             backup();
             printf($lang['backup']['complete']);
             break;

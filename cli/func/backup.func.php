@@ -5,6 +5,7 @@ mkdir($cfg['backup']['path'], 0777, true);
 function backup($path = BASE_PATH)
 {
     global $cfg;
+    global $lang;
 
     foreach (scandir($path) as $file){
         if(in_array($file, $cfg['backup']['excluded'])){
@@ -31,6 +32,8 @@ function backup($path = BASE_PATH)
         }
 
         copy($constPath, $filePath);
-        echo "\n \033[33m Backup of \033[0m " . $filePath . " \033[33m created. \033[0m";
+        if(!$cfg['backup']['silent']){
+            printf($lang['backup']['file_created'], $filePath);
+        }
     }
 }

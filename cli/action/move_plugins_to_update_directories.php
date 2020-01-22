@@ -51,15 +51,41 @@ function getUpdatesDirectories($path = __DIR__, $arr = [])
             continue;
         }
 
+        if(strpos($constPath, 'backup')){
+            continue;
+        }
+
         $arr[] = $constPath;
     }
 
     return $arr;
 }
 
+$pathes = null;
+
+foreach ($argv as $flag){
+    $flag = strtolower($flag);
+    if(!array_key_exists($flag, $cfg['update']['flags'])){
+        continue;
+    }
+
+    $pathes = $cfg['update']['flags'][$flag];
+    break;
+}
+
 $newPlugins = getNewPlugins(BASE_PATH . '/update');
 
-$dirs = getUpdatesDirectories(BASE_PATH);
+$dirs = [];
+
+if(null === $pathes){
+    $dirs = getUpdatesDirectories(BASE_PATH);
+}else {
+    foreach($pathes as $path) {
+        $path = BASE_PATH . $path;
+        $dirs = array_merge(getUpdatesDirectories($path), $dirs);
+    }
+}
+
 foreach ($dirs as $dir){
     foreach (scandir($dir) as $jarFile){
         $jarFilePath = $dir . "/" . $jarFile;

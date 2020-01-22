@@ -2,16 +2,24 @@
 
 $cfg = [
     'backup' => [
-        'path' => BASE_PATH . "/backup/" . time(), //Backup Path when using --bk flag
+        'path' => BASE_PATH . "/backup/" . md5(time().uniqid("", true)), //Backup Path when using --bk flag
         'excluded' => [
             '.git',
             'backup',
         ],
+        'silent' => true,
     ],
     'update'=> [
-        'path' => '',
-        'excluded' => [
-
+        'flags' => [
+            '-lobby' => [
+                '/server/lobby',
+            ],
+            '-citybuild' => [
+                '/server/citybuild',
+            ],
+            '-gravity' => [
+                '/server/citybuild/moon',
+            ],
         ],
     ],
 ];

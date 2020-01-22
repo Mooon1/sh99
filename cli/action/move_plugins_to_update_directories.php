@@ -78,14 +78,14 @@ foreach ($dirs as $dir){
             }
 
             unlink($jarFilePath);
-            echo "\n\033[33mJar file: " . $jarFilePath . " deleted.\033[0m";
+            echo "\n \033[31m Jar file: " . $jarFilePath . " deleted. \033[0m";
             break;
         }
     }
 
     foreach ($newPlugins as $plugin){
         copy($plugin['path'], $dir . '/' . $plugin['name']);
-        echo "\n\033[0mJar file: " . $plugin['name'] . " has copied to " . $dir . ".";
+        echo "\n \033[33m Jar file: " . $plugin['name'] . " has copied to " . $dir . ". \033[0m";
     }
 }
 

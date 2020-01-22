@@ -23,7 +23,7 @@ if(isset($argv[1])){
     switch ($argv[1]){
         case "update":
             require_once __DIR__ . "/cli/action/move_plugins_to_update_directories.php";
-            echo $lang['update']['compelete'];
+            echo $lang['update']['complete'];
             break;
         default:
             echo $lang['notfound'];

@@ -1,6 +1,5 @@
 <?php
 
-mkdir($cfg['backup']['path'], 0777, true);
 
 function backup($path = BASE_PATH)
 {

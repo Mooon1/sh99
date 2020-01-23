@@ -13,6 +13,7 @@ foreach ($argv as $arg){
     switch ($arg){
         case "--bk":
         case "--backup":
+            mkdir($cfg['backup']['path'], 0777, true);
             echo $lang['backup']['loading'];
             backup();
             printf($lang['backup']['complete']);

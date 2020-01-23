@@ -9,6 +9,14 @@ $cfg = [
         ],
         'silent' => true,
     ],
+    'run' => [
+        'flags' => [
+            '-gungame' => [
+                '/server/lobby',
+                '/server/minigame/gungame',
+            ],
+        ],
+    ],
     'update'=> [
         'flags' => [
             '-lobby' => [

@@ -46,7 +46,7 @@ Create a backup from your whole bungeecord-project with `--bk` or `--backup`
 
 ---
 
-Create custom Flags for update-groups. Whenever you want to push the update folder only to specific pathes you can add these pathes to `$cfg['update']['flags']['-myflag']` and call the update command with this flag `-myflag`.
+Create custom Flags for update-groups. Whenever you want to push the update or run folder only to specific pathes you can add these pathes to `$cfg['update']['flags']['-myflag']` and call the command with this flag `-myflag`.
 
 `php -f sh99.php update --bk -myflag`
 

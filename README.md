@@ -24,6 +24,10 @@ Before using a command you always need to call php on cli.
 
 ---
 
+**Starting all servers recursievly contained in this directory**
+
+`php -f sh99.php run`
+
 **Updating a plugin to all bungeecord server**
 
 Unsafe: `php -f sh99.php update`
